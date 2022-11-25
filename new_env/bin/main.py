@@ -27,9 +27,20 @@ london_co = {
         }
 
 request_name = input("Введите имя устройства: ")
-request_parameter = input("Введите параметр устройства: ")
+parameters = []
 
-print(london_co[request_name][request_parameter])
+for k in london_co[request_name].keys():
+    parameters.append(k)
+
+str_parameters = ", ".join(parameters)
+
+request_parameter = input(f"Введите параметр устройства ({str_parameters}): ")
+
+if request_parameter in parameters:
+    print(london_co[request_name][request_parameter])
+else:
+    print("Такого параметра не существует")
+    
 
 
 
