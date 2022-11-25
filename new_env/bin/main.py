@@ -36,8 +36,10 @@ str_parameters = ", ".join(parameters)
 
 request_parameter = input(f"Введите параметр устройства ({str_parameters}): ")
 
-if request_parameter in parameters:
-    print(london_co[request_name][request_parameter])
+lower_request_parameter = request_parameter.lower()
+
+if lower_request_parameter in parameters:
+    print(london_co[request_name][lower_request_parameter])
 else:
     print("Такого параметра не существует")
     
