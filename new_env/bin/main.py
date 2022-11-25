@@ -26,8 +26,10 @@ london_co = {
             }
         }
 
-user_request = input("Введите имя устройства: ")
+request_name = input("Введите имя устройства: ")
+request_parameter = input("Введите параметр устройства: ")
 
-print(london_co[user_request])
+print(london_co[request_name][request_parameter])
+
 
 
